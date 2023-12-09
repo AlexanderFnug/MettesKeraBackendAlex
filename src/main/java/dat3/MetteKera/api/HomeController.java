@@ -1,14 +1,14 @@
 package dat3.MetteKera.api;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class HomeController {
 
     @GetMapping("/")
     public String home() {
-        // return the name of the view (HTML or template file)
-        return "index"; 
+        // return a simple message or data
+        return "Alexander's backend";
     }
 }
