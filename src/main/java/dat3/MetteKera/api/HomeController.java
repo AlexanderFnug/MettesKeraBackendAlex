@@ -1,5 +1,6 @@
 package dat3.MetteKera.api;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
