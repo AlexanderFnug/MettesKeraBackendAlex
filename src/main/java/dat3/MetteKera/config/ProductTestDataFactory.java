@@ -11,6 +11,9 @@ import dat3.security.repository.UserWithRolesRepository;
 
 import java.util.*;
 
+import static dat3.security.entity.Role.ADMIN;
+import static dat3.security.entity.Role.USER;
+
 public class ProductTestDataFactory {
     CategoryRepository categoryRepository;
     ProductRepository productRepository;
@@ -24,8 +27,10 @@ public class ProductTestDataFactory {
 
     public void generateTestProducts() {
 
-        UserWithRoles testUser1 = new UserWithRoles("USER", "test666", "alex@alex.alex");
-        UserWithRoles testUser2 = new UserWithRoles("ADMIN", "test666", "admin@admin.admin");
+        UserWithRoles testUser1 = new UserWithRoles("testuser1", "test666", "alex@alex.alex");
+        UserWithRoles testUser2 = new UserWithRoles("testuser2", "test666", "admin@admin.admin");
+        testUser1.addRole(USER);
+        testUser2.addRole(ADMIN);
         List<UserWithRoles> users = new ArrayList<>(List.of(testUser1, testUser2));
         userWithRolesRepository.saveAll(users);
 
