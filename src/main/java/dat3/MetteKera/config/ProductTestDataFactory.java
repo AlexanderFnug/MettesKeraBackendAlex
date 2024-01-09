@@ -27,8 +27,8 @@ public class ProductTestDataFactory {
 
     public void generateTestProducts() {
 
-        UserWithRoles testUser1 = new UserWithRoles("testuser1", "test666", "alex@alex.alex");
-        UserWithRoles testUser2 = new UserWithRoles("testuser2", "test666", "admin@admin.admin");
+        //UserWithRoles testUser1 = new UserWithRoles("testuser1", "", "alex@alex.alex");
+        //UserWithRoles testUser2 = new UserWithRoles("testuser2", "", "admin@admin.admin"); set in password
         testUser1.addRole(USER);
         testUser2.addRole(ADMIN);
         List<UserWithRoles> users = new ArrayList<>(List.of(testUser1, testUser2));
